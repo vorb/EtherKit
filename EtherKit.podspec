@@ -17,15 +17,15 @@ Pod::Spec.new do |s|
   s.authors          = "Vault, Inc."
   s.source           = { :git => 'https://github.com/Vaultio/EtherKit.git', :tag => '0.2.0' }
 
-  s.ios.deployment_target = '10.0'
-  s.swift_version = '4.1'
+  s.ios.deployment_target = '11.0'
+  s.swift_version = '5.2'
 
   s.subspec 'Core' do |core|
     core.source_files = 'EtherKit/**/*'
     core.dependency 'BigInt'
     core.dependency 'Starscream'
     core.dependency 'Marshal'
-    core.dependency 'CryptoSwift', "~> 1.0.0"
+    core.dependency 'CryptoSwift'
     core.dependency 'secp256k1.swift'
     core.dependency 'Result'
     core.resource_bundles = {
